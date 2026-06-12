@@ -3,12 +3,29 @@
 <html>
 <body>
     <h1>商品の検索を行います。</h1>
+    <form action='/index/searchResult/' method="POST">
     <p1>カテゴリ:</p1>
-    <select>
-        <option value="temp1">すべて</option>
-        <option value="temp2">帽子</option>
-        <option value="temp3">鞄</option>
+    <select name="category" id="temp">
+    <option value="all">すべて</option>
+    {% for category in shopping_list %}
+        <option value="{{category.category_id}}">
+            {{category.name}}  
+        </option>
+    {% endfor %}
     </select>
-    <p2>キーワード:</p2>
+
+    <p1>キーワード:</p1>
+    <input type="text" name="search">
+    <button type="submit">検索</button>
+    </form>
+    <br>
+    <a href="url">ショッピングカートを見る</a>
+    <br>
+    <a href="url">購入履歴</a>
+    <br>
+    <a href="url">ログイン</a>
+    <br>
+    <a href="url">管理者ページ（任意機能）</a>
+    <br>
 </body>
 </html>
