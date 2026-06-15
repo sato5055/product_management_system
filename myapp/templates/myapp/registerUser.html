@@ -4,11 +4,11 @@
 </head>
 <body>
     <h1>会員情報を入力してください。</h1>
-    <form>
+    <form action="/index/registerUserConfirm/" method="POST">>
     <table border="1">
         <tr>
             <th><label for="userID"></label>会員ID：</label></th>
-            <td><input type="text" id="userID" name="userID"><br></td>
+            <td><input type="text" id="user_id" name="user_id"><br></td>
         </tr>
         
         <tr>
@@ -29,10 +29,10 @@
             <td><input type="text" id="address" name="address"><br></td>
         </tr>
         <tr>
-            <th><input type="submit" value="登録確認"></th>
+            <th colspan = 2><input type="submit" value="登録確認"></th>
         </tr> 
     </form>
     </table>
-    <a href="url">商品検索</a>へ
+    <a href="../">商品検索</a>へ
 </body>
 </html>
